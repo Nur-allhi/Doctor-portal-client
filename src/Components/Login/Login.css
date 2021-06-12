@@ -1,0 +1,50 @@
+.login-page {
+  position: relative;
+  margin: 0 auto;
+  width: 90vw;
+  height: 100vh;
+}
+.login-form {
+  width: 400px;
+  /* height: 300px; */
+  margin-top: 100px;
+  text-align: center;
+  border-radius: 10px;
+  position: absolute;
+  left: 100px;
+  padding: 20px;
+  box-shadow: 9px 18px 28px #888888;
+}
+.login-form input {
+  border-radius: 5px;
+  border: none;
+  margin-bottom: 10px;
+  border-bottom: 0.3px solid gray;
+}
+
+.login-image {
+  position: absolute;
+  right: 0;
+}
+.login-image img {
+  height: 500px;
+}
+.login-form button {
+  background-color: rgb(160, 231, 231);
+  border-radius: 10px;
+  border: none;
+}
+.google-Icon {
+  height: 25px;
+}
+@media (max-width: 768px) {
+  .login-image {
+    display: none;
+  }
+  .login-form {
+    margin: 100px auto;
+    width: 300px;
+    position: relative;
+    left: 0;
+  }
+}

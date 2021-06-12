@@ -13,3 +13,9 @@
   opacity: 0.9;
   z-index: -1;
 }
+.contact-form input {
+  margin: 10px 0;
+}
+.contact-form button {
+  margin-top: 10px;
+}

@@ -15,7 +15,7 @@ const HeaderMain = () => {
           quae porro, laborum nam soluta nisi at ullam expedita necessitatibus
           magni. A.
         </p>
-        <button type="button" class="btn btn-info">
+        <button type="button" className="btn btn-info">
           Get Appointment
         </button>
       </div>

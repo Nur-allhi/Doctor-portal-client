@@ -39,7 +39,7 @@ const Testimonials = () => {
             What Our Patients <br /> Says{" "}
           </h1>
         </div>
-        <div className="card-deck mt-5">
+        <div className="card-deck mt-5 d-flex justify-content-evenly ">
           {testimonialData.map((testimonial) => (
             <Testimonial testimonial={testimonial} key={testimonial.name} />
           ))}

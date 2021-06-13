@@ -23,24 +23,22 @@ const AppointmentForm = ({ modalIsOpen, closeModal, appointmentOn, date }) => {
   } = useForm();
 
   const onSubmit = (data) => {
-    console.log(data);
     closeModal();
     data.service = appointmentOn;
     data.date = date;
-    data.created = new Date();
-
-    // fetch("http://localhost:5000/addAppointment", {
-    //   method: "POST",
-    //   headers: { "content-type": "application/json" },
-    //   body: JSON.stringify(data),
-    // })
-    //   .then((res) => res.json())
-    //   .then((success) => {
-    //     if (success) {
-    //       closeModal();
-    //       // alert('Appointment created successfully.');
-    //     }
-    //   });
+    data.appointmentTooked = new Date();
+    fetch("http://localhost:5000/addAppointment", {
+      method: "POST",
+      headers: { "content-type": "application/json" },
+      body: JSON.stringify(data),
+    })
+      .then((res) => res.json())
+      .then((success) => {
+        if (success) {
+          closeModal();
+          alert("Your Appointment schedule successfully");
+        }
+      });
   };
 
   return (
@@ -88,7 +86,7 @@ const AppointmentForm = ({ modalIsOpen, closeModal, appointmentOn, date }) => {
               <span className="text-danger">This field is required</span>
             )}
           </div>
-          <div className="form-group row">
+          <div className="form-group row align-items-center">
             <div className="col-4">
               <select
                 className="form-control"

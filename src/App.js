@@ -4,7 +4,9 @@ import "./App.css";
 import Appointment from "./Components/Appointment/AppointmentConnection/Appointment";
 import HomeConnection from "./Components/Home/HomeConnection/Home";
 import Login from "./Components/Login/Login";
-import PrivateRoute from "./Components/Login/PrivateRoute";
+// import PrivateRoute from "./Components/Login/PrivateRoute";
+
+import Dashboard from "./Components/Dashboard/MainDashBoard/Dashboard";
 
 export const userContext = createContext();
 function App() {
@@ -17,9 +19,12 @@ function App() {
           <Route exact path="/">
             <HomeConnection />
           </Route>
-          <PrivateRoute path="/appointment">
+          <Route path="/appointment">
             <Appointment />
-          </PrivateRoute>
+          </Route>
+          <Route path="/dashboard/appointment">
+            <Dashboard />
+          </Route>
           <Route path="/login">
             <Login />
           </Route>
